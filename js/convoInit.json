@@ -1,15 +1,7 @@
 { "convo" :
 	[{
 		"username": "John Wark",
-		"conversation": "Wut wut."
-	},
-	{
-		"username": "Brenda Long",
-		"conversation": "Hey! Wassup."
-	},
-	{
-		"username": "John Wark",
-		"conversation": "How are you today?"
+		"conversation": "Teach me your ways."
 	},
 	{
 		"username": "Brenda Long",
@@ -17,6 +9,14 @@
 	},
 	{
 		"username": "John Wark",
-		"conversation": "Teach me your ways."
+		"conversation": "How are you today?"
+	},
+	{
+		"username": "Brenda Long",
+		"conversation": "Hey! Wassup."
+	},
+	{
+		"username": "John Wark",
+		"conversation": "Wut wut."
 	}
 ]}
