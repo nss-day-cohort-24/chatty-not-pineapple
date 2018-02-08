@@ -1,22 +1,22 @@
-[
-	{
-		"name": "John Wark",
-		"conversation": "Hello"
+{ "convo" :
+	[{
+		"username": "John Wark",
+		"conversation": "Wut wut."
 	},
 	{
-		"name": "Brenda Long",
-		"conversation": "Hello"
+		"username": "Brenda Long",
+		"conversation": "Hey! Wassup."
 	},
 	{
-		"name": "John Wark",
+		"username": "John Wark",
 		"conversation": "How are you today?"
 	},
 	{
-		"name": "Brenda Long",
+		"username": "Brenda Long",
 		"conversation": "Great I got my Grunt working!"
 	},
 	{
-		"name": "John Wark",
+		"username": "John Wark",
 		"conversation": "Teach me your ways."
 	}
-]
+]}
