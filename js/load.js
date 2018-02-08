@@ -17,7 +17,7 @@ function showData(dataArray){
 	for(var entry in dataArray) {                  // Print to "message-history-div"
 		var convoData = "";
 		var convoItem = dataArray[entry];
-		convoData += "<div>";
+		convoData += "<div id = "`${entry}`">";
 		convoData += "<h4>" + convoItem.username + "</h4>";
 		convoData += "<h2>" + convoItem.conversation + "</h2>";
 		convoData += "</div>";
@@ -25,6 +25,11 @@ function showData(dataArray){
 		preHistory.innerHTML += convoData;
 	}
 
+}
+
+
+for (var i = o ; i < 10; i++){
+	var entry = `${i}`;
 }
 
 convoRequest.open("GET", "convoInit.json");

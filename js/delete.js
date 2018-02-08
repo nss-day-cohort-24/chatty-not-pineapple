@@ -1,4 +1,14 @@
 "use strict";
+
+//Delete Button
+
+function deleteButton {
+    x = dataArray.indexOf(this.entry);
+    dataArray.splice(x, 1);
+}
+
+
+//Clear All Button
 var deleteAll = document.getElementById("deleteAllButton");
 
 function deleteInput () {
