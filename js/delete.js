@@ -1,3 +1,4 @@
+"use strict";
 var deleteAll = document.getElementById("deleteAllButton");
 
 function deleteInput () {

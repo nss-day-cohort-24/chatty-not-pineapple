@@ -1,5 +1,29 @@
-/**#nav-div {
-    display: flex;
-    background-color: #2c314f;
-}**/
+$darkblue: #2c314f;
+$lightblue: #7acdcf;
+$lightgray: #efeee9;
+$darkgray: #aaaaaa;
+$font: "Monteserrat", helvetica, arial, sans-serif;
 
+#logo {
+    width: 15%;
+}
+
+#textSend {
+    display: flex;
+    flex-direction: row;
+}
+
+#enter-text-field {
+    border-radius: 10px;
+    width: 50%;
+    background-color: $lightgray;
+}
+
+#nav-div {
+    display: flex;
+    align-content: center;
+    // flex-wrap: wrap;
+    margin: auto;
+    border-bottom: 1px solid #aaaaaa;
+    width: 90%
+}
