@@ -1,3 +1,5 @@
+"use strict";
+
 var startDateTime = Date().now;
 var convoRequest = new XMLHttpRequest();
 
@@ -27,3 +29,5 @@ function showData(dataArray){
 
 convoRequest.open("GET", "convoInit.json");
 convoRequest.send();
+
+module.exports = {showData};
