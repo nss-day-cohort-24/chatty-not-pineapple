@@ -29,6 +29,11 @@ function showData(dataArray){
 
 }
 
+
+for (var i = o ; i < 10; i++){
+	var entry = `${i}`;
+}
+
 convoRequest.open("GET", "convoInit.json");
 convoRequest.send();
 
