@@ -2,11 +2,13 @@
 
 var startDateTime = Date().now;
 var convoRequest = new XMLHttpRequest();
+var retrievedConvo;
+
 
 convoRequest.addEventListener("load", convoRequestComplete);
 
 function convoRequestComplete(event) {
-	var retrievedConvo = JSON.parse(event.target.responseText); //error
+	retrievedConvo = JSON.parse(event.target.responseText); //error
 	showData(retrievedConvo);
 }
 
@@ -17,9 +19,9 @@ function showData(dataArray){
 	for(var entry in dataArray) {                  // Print to "message-history-div"
 		var convoData = "";
 		var convoItem = dataArray[entry];
-		convoData += "<div id = "`${entry}`">";
-		convoData += "<h4>" + convoItem.username + "</h4>";
-		convoData += "<h2>" + convoItem.conversation + "</h2>";
+		convoData += `<div class="message-entry">`;
+		convoData += `<h4 class="username"> ${convoItem.username} </h4>`;
+		convoData += `<h2 class="conversation item"> ${convoItem.conversation} </h2>`;
 		convoData += "</div>";
 
 		preHistory.innerHTML += convoData;
