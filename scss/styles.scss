@@ -4,26 +4,94 @@ $lightgray: #efeee9;
 $darkgray: #aaaaaa;
 $font: "Monteserrat", helvetica, arial, sans-serif;
 
-#logo {
-    width: 15%;
-}
 
-#textSend {
+#nav-div {
+    border-bottom: 1px solid $darkgray;
+    width: 90%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+}
+
+#logo {
+    display: flex;
+    width: 100%;
 }
 
 #enter-text-field {
-    border-radius: 10px;
-    width: 50%;
+    display: flex;
     background-color: $lightgray;
+    justify-content: center;
 }
 
-#nav-div {
+#checkboxes {
     display: flex;
-    align-content: center;
-    // flex-wrap: wrap;
-    margin: auto;
-    border-bottom: 1px solid #aaaaaa;
-    width: 90%
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5%
 }
+
+#dark-checkbox {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+#text-checkbox {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+#dark-box {
+	-webkit-appearance: none;
+	background-color: $lightgray;
+	padding: 9px;
+    border-radius: 1px;
+    text-align: left;
+    margin-right: .1in;
+}
+
+#dark-box:checked {
+	background-color: $darkblue;
+	color: $lightgray;
+}
+
+#text-box {
+	-webkit-appearance: none;
+	background-color: $lightgray;
+	padding: 9px;
+    border-radius: 1px;
+    text-align: left;
+    margin-right: .1in;
+}
+
+#text-box:checked {
+	background-color: $darkblue;
+	color: $lightgray;
+}
+
+label {
+    color: $lightblue;
+    font-family: $font;
+}
+
+#footer {
+    border-top: 1px solid #aaaaaa;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#deleteAllButton {
+    float: right;
+    border: 3px solid $darkgray;
+    border-radius: 5px;
+    font-family: $font;
+    color: $darkgray;
+    font-size: 10px;
+    padding: .5em 1em;
+}
+

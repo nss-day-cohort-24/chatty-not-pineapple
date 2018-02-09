@@ -43,6 +43,10 @@ function showData(dataArray){
 }
 
 
+for (var i = 0 ; i < 10; i++){
+	var entry = `${i}`;
+}
+
 convoRequest.open("GET", "convoInit.json");
 convoRequest.send();
 
