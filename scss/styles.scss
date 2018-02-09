@@ -16,13 +16,15 @@ $font: "Monteserrat", helvetica, arial, sans-serif;
 
 #logo {
     display: flex;
-    width: 100%;
+    margin-top: 10%;
+    width: 125%;
 }
 
 #enter-text-field {
     display: flex;
     background-color: $lightgray;
     justify-content: center;
+    margin-bottom: 2.5%;
 }
 
 #checkboxes {
@@ -30,7 +32,7 @@ $font: "Monteserrat", helvetica, arial, sans-serif;
     flex-direction: column;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 5%
+    margin-right: 2.5%
 }
 
 #dark-checkbox {
@@ -93,5 +95,41 @@ label {
     color: $darkgray;
     font-size: 10px;
     padding: .5em 1em;
+    margin-right: 2.5%
+}
+
+.btn-primary {
+    background-color: $lightblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #ffffff;
+    margin-bottom: 30%;
+    padding: 10px;
+
+}
+
+.btn-primary:focus {
+    background-color: #ffffff;
+    border: 3px solid $lightblue;
+    color: $lightblue;
+}
+
+.text-fuction {
+    display: flex;
+    flex-direction: column;
+}
+
+#send-button {
+    display: flex;
+    float: right;
+    margin-bottom: 2.5%;
+    background-color: $lightblue;
+    width: 100px;
+    border-radius: 100px;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border: none;
 }
 
