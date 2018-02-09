@@ -12,6 +12,7 @@ $font: "Monteserrat", helvetica, arial, sans-serif;
     flex-direction: row;
     justify-content: space-between;
     margin: auto;
+    background-color: #fff;
 }
 
 #logo {
@@ -95,7 +96,8 @@ label {
     color: $darkgray;
     font-size: 10px;
     padding: .5em 1em;
-    margin-right: 2.5%
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
 }
 
 .btn-primary {
@@ -123,7 +125,7 @@ label {
 #send-button {
     display: flex;
     float: right;
-    margin-bottom: 2.5%;
+    margin-bottom: 2%;
     background-color: $lightblue;
     width: 100px;
     border-radius: 100px;
@@ -135,18 +137,34 @@ label {
 
 .message-entry {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-content: flex-start;
+    margin-left: 30%;
 }
 
-.username-item {
+
+h4 {
     display: flex;
-    width: 50%;
     font-family: $font;
     color: $darkgray;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 1em;
+}
+
+h2 {
+    display: flex;
+    font-family: $font;
+    color: white;
+    background-color: $darkblue;
+    border-radius: 5in;
+    font-weight: lighter;
+    width: 5in;
+    padding: .5em 1em;
     font-size: 20px;
 }
 
-.conversation-item {
-    display: flex;
+body {
+    margin-top: 225px;
 }
 

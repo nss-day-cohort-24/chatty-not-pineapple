@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: auto; }
+  margin: auto;
+  background-color: #fff; }
 
 #logo {
   display: flex;
@@ -76,7 +77,8 @@ label {
   color: #aaaaaa;
   font-size: 10px;
   padding: .5em 1em;
-  margin-right: 2.5%; }
+  margin-right: 2.5%;
+  margin-bottom: 2.5%; }
 
 .btn-primary {
   background-color: #7acdcf;
@@ -99,7 +101,7 @@ label {
 #send-button {
   display: flex;
   float: right;
-  margin-bottom: 2.5%;
+  margin-bottom: 2%;
   background-color: #7acdcf;
   width: 100px;
   border-radius: 100px;
@@ -110,16 +112,30 @@ label {
 
 .message-entry {
   display: flex;
-  justify-content: flex-start; }
+  flex-direction: column;
+  align-content: flex-start;
+  margin-left: 30%; }
 
-.username-item {
+h4 {
   display: flex;
-  width: 50%;
   font-family: "Monteserrat", helvetica, arial, sans-serif;
   color: #aaaaaa;
+  font-size: 15px;
+  font-weight: lighter;
+  margin-top: 1em; }
+
+h2 {
+  display: flex;
+  font-family: "Monteserrat", helvetica, arial, sans-serif;
+  color: white;
+  background-color: #2c314f;
+  border-radius: 5in;
+  font-weight: lighter;
+  width: 5in;
+  padding: .5em 1em;
   font-size: 20px; }
 
-.conversation-item {
-  display: flex; }
+body {
+  margin-top: 225px; }
 
 /*# sourceMappingURL=styles.css.map */
