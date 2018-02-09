@@ -8,19 +8,21 @@
 
 #logo {
   display: flex;
-  width: 100%; }
+  margin-top: 10%;
+  width: 125%; }
 
 #enter-text-field {
   display: flex;
   background-color: #efeee9;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 2.5%; }
 
 #checkboxes {
   display: flex;
   flex-direction: column;
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: 5%; }
+  margin-right: 2.5%; }
 
 #dark-checkbox {
   display: flex;
@@ -73,6 +75,37 @@ label {
   font-family: "Monteserrat", helvetica, arial, sans-serif;
   color: #aaaaaa;
   font-size: 10px;
-  padding: .5em 1em; }
+  padding: .5em 1em;
+  margin-right: 2.5%; }
+
+.btn-primary {
+  background-color: #7acdcf;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #ffffff;
+  margin-bottom: 30%;
+  padding: 10px; }
+
+.btn-primary:focus {
+  background-color: #ffffff;
+  border: 3px solid #7acdcf;
+  color: #7acdcf; }
+
+.text-fuction {
+  display: flex;
+  flex-direction: column; }
+
+#send-button {
+  display: flex;
+  float: right;
+  margin-bottom: 2.5%;
+  background-color: #7acdcf;
+  width: 100px;
+  border-radius: 100px;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  border: none; }
 
 /*# sourceMappingURL=styles.css.map */
