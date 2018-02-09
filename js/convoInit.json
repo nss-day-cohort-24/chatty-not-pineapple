@@ -1,5 +1,5 @@
-{ "convo" :
-	[{
+[
+	{
 		"username": "John Wark",
 		"conversation": "Teach me your ways."
 	},
@@ -19,4 +19,4 @@
 		"username": "John Wark",
 		"conversation": "Wut wut."
 	}
-]}
+]

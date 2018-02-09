@@ -3,9 +3,12 @@
 Declarations
 
 */
+
+
 var startDateTime = Date().now;
 var convoRequest = new XMLHttpRequest();
 var retrievedConvo;
+
 
 /* 
 Event-Listeners
@@ -43,11 +46,7 @@ function showData(dataArray){
 }
 
 
-for (var i = 0 ; i < 10; i++){
-	var entry = `${i}`;
-}
-
-convoRequest.open("GET", "convoInit.json");
+convoRequest.open("GET", "js/convoInit.json");
 convoRequest.send();
 
 module.exports = {showData}; //Export showData function to Main.js to call it.
