@@ -30,7 +30,7 @@ function showData(dataArray){
 }
 
 
-for (var i = o ; i < 10; i++){
+for (var i = 0 ; i < 10; i++){
 	var entry = `${i}`;
 }
 
