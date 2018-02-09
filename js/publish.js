@@ -1,32 +1,52 @@
 "use strict";
 
+/* 
+Declarations
+*/
+
 var enterButton = document.getElementById("send-button");
+var temp = {
+
+	username: "" , 
+	convo: ""
+
+};
 var convoArr = [{
+
 	username: "",
 	conversation: ""
 }];
-var temp = {username: "" , convo: ""};
 
 
-function sendButtonEvent(event){
+
+function sendButtonEvent(event){ 
+	/*
+    Once send button is pressed, event occurs that triggers enter-text-field element to pass
+    data contained to a variable, which is unshifted into convoArr[]. Then,
+    printMessage is passed the current convoArr[].
+    */
 	event.keyCode === 13 ? (
 		temp += document.getElementByClassName("enter-text-field").innerHTML,
-		convoArr.unshift(temp) // 
+		convoArr.unshift(temp) 
 	): 
-		undefined
-	;
+		undefined;
     
 	printMessage(convoArr);
 }
 
 
 function printMessage(lastMessage){
+	/*
+    Push array of conversation to the HMTL page.
+    */
+
 	var textField = document.getElementById("message-history-div"); 
 	var printText;
 
-	printText += `<h4 class="username"> ${lastMessage.username} </h4>`;
-	printText += `<h2 class="conversation item"> ${lastMessage.conversation} </h2>`;
-	printText += "</div>";
+	printText += `<div class="text-message">
+    <h4 class="username"> ${lastMessage.username} </h4>
+	<h2 class="conversation item"> ${lastMessage.conversation} </h2>
+    </div>`;
 
 	textField.innerHTML += printText;
 
