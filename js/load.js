@@ -15,8 +15,6 @@ convoRequest.addEventListener("load", convoRequestComplete);
 
 
 
-
-
 function convoRequestComplete(event) {
 	retrievedConvo = JSON.parse(event.target.responseText); //error
 	showData(retrievedConvo);
@@ -34,10 +32,10 @@ function showData(dataArray){
 	for(var entry in dataArray) {                  
 		var convoData = "";
 		var convoItem = dataArray[entry];
-		convoData += `<div class="message-entry">`;
-		convoData += `<h4 class="username"> ${convoItem.username} </h4>`;
-		convoData += `<h2 class="conversation item"> ${convoItem.conversation} </h2>`;
-		convoData += "</div>";
+		convoData += `<div class="message-entry">
+    <h4 class="username"> ${convoItem.username} </h4>
+    <h2 class="conversation item"> ${convoItem.conversation} </h2>
+    </div>`;
 
 		preHistory.innerHTML += convoData;
 	}
