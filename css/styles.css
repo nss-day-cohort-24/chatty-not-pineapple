@@ -108,4 +108,18 @@ label {
   color: #fff;
   border: none; }
 
+.message-entry {
+  display: flex;
+  justify-content: flex-start; }
+
+.username-item {
+  display: flex;
+  width: 50%;
+  font-family: "Monteserrat", helvetica, arial, sans-serif;
+  color: #aaaaaa;
+  font-size: 20px; }
+
+.conversation-item {
+  display: flex; }
+
 /*# sourceMappingURL=styles.css.map */

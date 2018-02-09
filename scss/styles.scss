@@ -133,3 +133,20 @@ label {
     border: none;
 }
 
+.message-entry {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.username-item {
+    display: flex;
+    width: 50%;
+    font-family: $font;
+    color: $darkgray;
+    font-size: 20px;
+}
+
+.conversation-item {
+    display: flex;
+}
+
