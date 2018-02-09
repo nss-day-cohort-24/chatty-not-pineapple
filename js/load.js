@@ -36,8 +36,8 @@ function showData(dataArray){
 		var convoData = "";
 		var convoItem = dataArray[entry];
 		convoData += `<div class="message-entry">
-    <h4 class="username"> ${convoItem.username} </h4>
-    <h2 class="conversation item"> ${convoItem.conversation} </h2>
+    <h4 class="username-item"> ${convoItem.username} </h4>
+    <h2 class="conversation-item"> ${convoItem.conversation} </h2>
     </div>`;
 
 		preHistory.innerHTML += convoData;
