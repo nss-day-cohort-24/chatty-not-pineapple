@@ -9,7 +9,7 @@ function createDeleteEntry(position, printText, convoArr){
     Create delete button
     */
 	var appendButton; 
-	appendButton += `<button id="delete-button-${position}"></button>`;
+	appendButton += `<button img="images/trash.svg" id="delete-button-${position}"></button>`;
 	printText += appendButton;
     
 	/* 
@@ -17,7 +17,7 @@ function createDeleteEntry(position, printText, convoArr){
     convoArr, at given position, data
     */
 
-	document.getElementbyID(`"delete-button-${position}"`).addEventListener("click", function(){
+	document.getElementById(`"delete-button-${position}"`).addEventListener("click", function(){
 		convoArr[position] = "";
 	});
 	return printText;
