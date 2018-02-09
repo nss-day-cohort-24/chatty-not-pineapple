@@ -2,10 +2,13 @@
 
 //Delete Button
 
-function deleteButton {
+/** 
+function deleteButton (){
     x = dataArray.indexOf(this.entry);
     dataArray.splice(x, 1);
-}
+} **/
+
+.......addEventListener("click", deleteButton);
 
 
 //Clear All Button
