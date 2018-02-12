@@ -8,33 +8,36 @@ Declarations
 
 
 let count = 5;
-let enterButton = document.getElementById("send-button");
-let temp = {
-
-	username: "",
-	conversation: "",
-	id: ""
-
-};
-
-
+let enterButton = document.getElementById("enter-text-field");
+let temp = document.getElementById("enter-text-field").innerText;
 let convoArr = loader.retrievedConvo;
 
+// Event-listeners
+
+enterButton.addEventListener("keyup", enterButtonEvent);
 
 
-function sendButtonEvent(event){ 
+document.getElementById("send-button").addEventListener("click", function( event ) {
+	// display the current click count inside the clicked div
+	event.target.textContent = "click count: " + event.detail;
+	console.log(event.detail);
+}, false);
+
+
+function enterButtonEvent(){ 
 	/*
     Once enter key is pressed, event occurs that triggers enter-text-field element to pass
     data contained to a variable, which is unshifted into convoArr[]. Then,
     printMessage is passed the current convoArr[].
-    */
+	*/
     
 
 	if (event.keyCode === 13 || event.which === 13){
-		count++;
-		temp += document.getElementByClassName("enter-text-field").innerHTML;
+		
 		convoArr.unshift({username:"Jisie", conversation: `${temp}`, id: `${count}` });
+		console.log("this occured");
 		printMessage(convoArr);
+		temp = "";
 	}  
 }
 
@@ -43,19 +46,17 @@ function printMessage(lastMessage){
 	/*
     Push array of conversation to the HMTL page.
     */
-
+	count++;
 	var textField = document.getElementById("message-history-div"); 
-	var printText;
+	var printText= "";
 
-	printText += `<div class="message-entry">
-    <h4 class="username"> ${lastMessage.username} </h4>
-	<h2 class="conversation item"> ${lastMessage.conversation} </h2>
-    </div> <button id="delete-button"></button>`; //reference to the position.
-    
+	printText += "<div class=message-entry>" +
+	"<div class=username-item> " + lastMessage[count].username + "</div>" +
+	"<div class=conversation-item>" + lastMessage[count].conversation  + "</div>" +
+	"<button id=delete-button img=images/trash.svg></button></div> "; //reference to the position.
+	console.log(printText);
 	textField.innerHTML += printText;
-	//	deleter.createDeleteEntry(position, printText, convoArr); // This passes a reference to a specific text message element and creates a delete button.
-	deleter.deleteParent();
 
 }
 
-module.exports = {sendButtonEvent, printMessage};
+module.exports = {enterButtonEvent, printMessage};
