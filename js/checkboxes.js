@@ -12,7 +12,7 @@ function darkSide() {
         console.log("the box is checked");
         var message = document.getElementsByClassName("username-item"), i, len;
   
-        for (i = 0, message.length; i < len; i++) {
+        for (i = 0, len = message.length; i < len; i++) {
           message[i].style.color = '#2C81B7';
         }
     }
