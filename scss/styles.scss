@@ -170,3 +170,37 @@ body {
     margin-top: 225px;
 }
 
+#delete-button {
+    float: right;
+    border: 3px solid $darkgray;
+    border-radius: 5px;
+    font-family: $font;
+    color: $darkgray;
+    font-size: 10px;
+    padding: .5em 1em;
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+    width: 100px;
+}
+
+.username-item {
+    display: flex;
+    font-family: $font;
+    color: $darkgray;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 1em;
+}
+
+.conversation-item {
+    display: flex;
+    font-family: $font;
+    color: $darkblue;
+    background-color: $lightgray;
+    border-radius: 5in;
+    font-weight: lighter;
+    width: 5in;
+    padding: .5em 1em;
+    font-size: 20px;
+}

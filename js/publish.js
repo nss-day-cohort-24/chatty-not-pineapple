@@ -67,7 +67,7 @@ function printMessage(currentMessage){
 	printText += "<div class=message-entry>" +
 	"<div class=username-item> " + currentMessage.username + "</div>" +
 	"<div class=conversation-item>" + currentMessage.conversation + "</div>" +
-	"<button id=delete-button img=images/trash.svg></button></div> "; //reference to the position.
+	"<button id=delete-button>DELETE</button></div> "; //reference to the position.
 	console.log(printText);
 	textField.innerHTML += printText;
 
