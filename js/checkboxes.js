@@ -12,9 +12,9 @@ function darkSide() {
 
     if (darkBackground.checked === true) {
         console.log("the box is checked");
-        for (i = 0, len = user.length; i < len; i++) {
-          user[i].style.color = '#aaaaaa';
-        }
+        // for (i = 0, len = user.length; i < len; i++) {
+        //   user[i].style.color = '#aaaaaa';
+        // }
         for (x = 0, taco = conversation.length; x < taco; x++) {
             conversation[x].style.color = '#ffffff';
         }
@@ -22,9 +22,9 @@ function darkSide() {
             background[y].style.backgroundColor = '#2c314f';
         }
     }else if(darkBackground.checked === false) {
-        for (i = 0, len = user.length; i < len; i++) {
-          user[i].style.color = '#7acdcf';
-        }
+        // for (i = 0, len = user.length; i < len; i++) {
+        //   user[i].style.color = '#7acdcf';
+        // }
         for (x = 0, taco = conversation.length; x < taco; x++) {
             conversation[x].style.color = '#2c314f';
         }
