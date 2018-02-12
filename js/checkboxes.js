@@ -35,17 +35,17 @@ function bigText() {
     if (largeText.checked === true) {
         console.log("the box is checked");
         for (i = 0, len = user.length; i < len; i++) {
-            user[i].style.fontSize = '2em';
+            user[i].style.fontSize = '30px';
         }
         for (x = 0, taco = conversation.length; x < taco; x++) {
-            conversation[x].style.fontSize = '2em';
+            conversation[x].style.fontSize = '40px';
         }
     }else if(largeText.checked === false) {
         for (i = 0, len = user.length; i < len; i++) {
-            user[i].style.fontSize = '1em';
+            user[i].style.fontSize = '15px';
         }
         for (x = 0, taco = conversation.length; x < taco; x++) {
-            conversation[x].style.fontSize = '1em';
+            conversation[x].style.fontSize = '20px';
         }
     }
 }
