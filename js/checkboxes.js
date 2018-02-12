@@ -19,7 +19,7 @@ function darkSide() {
             conversation[x].style.color = '#aaaaaa';
         }
         for (y = 0, burrito = conversation.length; y < burrito; y++) {
-            conversation[y].style.color = '#e9e9e9';
+            background[y].style.backgroundColor = '#e9e9e9';
         }
     }else if(darkBackground.checked === false) {
         for (i = 0, len = user.length; i < len; i++) {
@@ -29,7 +29,7 @@ function darkSide() {
             conversation[x].style.color = '#e7e7e7';
         }
         for (y = 0, burrito = conversation.length; y < burrito; y++) {
-            conversation[y].style.color = '#red';
+            background[y].style.backgroundColor = '#red';
         }
     }
 }
