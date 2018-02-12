@@ -2,9 +2,12 @@
 
 let loader = require("./load");
 let publisher = require("./publish");
+<<<<<<< HEAD
 let style = require("./checkboxes");
+=======
+let remover = require("./delete");
+>>>>>>> master
 
-var enterButton = document.getElementById("send-button");
 
 console.log("test");
 //document.getElementById("dark-btn")
