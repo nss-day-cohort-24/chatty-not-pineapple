@@ -7,6 +7,6 @@ let style = require("./checkboxes");
 var enterButton = document.getElementById("send-button");
 
 console.log("test");
-style.testMe();
 //document.getElementById("dark-btn")
+
 
