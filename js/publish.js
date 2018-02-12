@@ -19,7 +19,7 @@ enterButton.addEventListener("keyup", enterButtonEvent);
 
 document.getElementById("send-button").addEventListener("click", function( event ) {
 	// display the current click count inside the clicked div
-	event.target.textContent = "click count: " + event.detail;
+	event.target.textContent = "SEND";
 	temp =  document.getElementById("enter-text-field").value;
 	count++;
 	console.log({username:"Jisie", conversation: `${temp}`, id: `${count}` });
@@ -29,7 +29,7 @@ document.getElementById("send-button").addEventListener("click", function( event
 	var tempString = "<div class=message-entry>" +
 	"<div class=username-item> " + "Jisie" + "</div>" +
 	"<div class=conversation-item>" + temp + "</div>" +
-	"<button id=delete-button img=images/trash.svg></button></div> ";
+	"<button id=delete-button>DELETE</button></div> ";
 	appendDOM.innerHTML += tempString;
 
 	document.getElementById("enter-text-field").value ="";
