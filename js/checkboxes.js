@@ -6,9 +6,9 @@ var darkBackground = document.getElementById("dark-box");
 // var checkBoxLarge = document.getElementById("inlineCheckbox2");
 // var message = document.getElementsByClassName("username-item");
 // var messagesText = document.getElementsByClassName("message-post");
-var message = document.getElementsByClassName("username-item"), i, len;
 
 function darkSide() {
+    var message = document.getElementsByClassName("username-item"), i, len;
     if (darkBackground.checked === true) {
         console.log("the box is checked");
 
