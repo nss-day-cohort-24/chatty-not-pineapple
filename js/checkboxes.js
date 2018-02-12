@@ -6,48 +6,36 @@ var darkBackground = document.getElementById("dark-box");
 // var messagesText = document.getElementsByClassName("message-post");
 
 function darkSide() {
-    var message = document.getElementsByClassName("username-item"), i, len;
-    var background = document.getElementsByClassName("conversation-item"), x, taco;
+    var user = document.getElementsByClassName("username-item"), i, len;
+    var conversation = document.getElementsByClassName("conversation-item"), x, taco;
+    var background = document.getElementsByTagName("h2"), y, burrito;
+
     if (darkBackground.checked === true) {
         console.log("the box is checked");
-        for (i = 0, len = message.length; i < len; i++) {
-          message[i].style.color = '#2C81B7';
+        for (i = 0, len = user.length; i < len; i++) {
+          user[i].style.color = '#2C81B7';
         }
-        for (x = 0, taco = background.length; x < taco; x++) {
-            background[x].style.color = '#aaaaaa';
-          }
+        for (x = 0, taco = conversation.length; x < taco; x++) {
+            conversation[x].style.color = '#aaaaaa';
+        }
+        for (y = 0, burrito = conversation.length; y < burrito; y++) {
+            conversation[y].style.color = '#e9e9e9';
+        }
     }else if(darkBackground.checked === false) {
-        for (i = 0, len = message.length; i < len; i++) {
-          message[i].style.color = '#ffffff';
+        for (i = 0, len = user.length; i < len; i++) {
+          user[i].style.color = '#ffffff';
         }
-        for (x = 0, taco = background.length; x < taco; x++) {
-            background[x].style.color = '#e7e7e7';
-           }
+        for (x = 0, taco = conversation.length; x < taco; x++) {
+            conversation[x].style.color = '#e7e7e7';
+        }
+        for (y = 0, burrito = conversation.length; y < burrito; y++) {
+            conversation[y].style.color = '#red';
+        }
     }
 }
 
 darkBackground.addEventListener("click", darkSide);
 
-// var changeText = document.getElementById("text-box");
-// // var checkBoxLarge = document.getElementById("inlineCheckbox2");
-// var message = document.getElementsByClassName("navbar");
-// // var messagesText = document.getElementsByClassName("message-post");
-
-// function darkSide() {
-//     var message = document.getElementsByClassName("username-item"), i, len;
-//     if (darkBackground.checked === true) {
-//         console.log("the box is checked");
-//         for (i = 0, len = message.length; i < len; i++) {
-//           message[i].style.color = '#2C81B7';
-//         }
-//     }else if(darkBackground.checked === false) {
-//         for (i = 0, len = message.length; i < len; i++) {
-//           message[i].style.color = '#ffffff';
-//         }
-//     }
-    
-// }
-// darkBackground.addEventListener("click", darkSide);
 
 module.exports = {darkSide};
 
