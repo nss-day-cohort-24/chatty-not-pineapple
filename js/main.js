@@ -2,8 +2,8 @@
 
 let loader = require("./load");
 let publisher = require("./publish");
+let remover = require("./delete");
 
-var enterButton = document.getElementById("send-button");
 
 console.log("test");
 

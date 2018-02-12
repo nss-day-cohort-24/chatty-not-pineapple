@@ -1,63 +1,76 @@
 "use strict";
 
 let deleter = require("./delete");
-
+let loader = require("./load");
 /* 
 Declarations
 */
 
 
-let count = 0;
-var temp = {
-
-	username: "" , 
-	convo: ""
-
-};
-var convoArr = [{
-
-	username: "",
-	conversation: ""
-}];
+let count = 5;
+let enterButton = document.getElementById("enter-text-field");
+let temp;
 
 
+// Event-listeners
 
-function sendButtonEvent(event){ 
+enterButton.addEventListener("keyup", enterButtonEvent);
+
+
+document.getElementById("send-button").addEventListener("click", function( event ) {
+	// display the current click count inside the clicked div
+	event.target.textContent = "click count: " + event.detail;
+	temp =  document.getElementById("enter-text-field").value;
+	count++;
+	console.log({username:"Jisie", conversation: `${temp}`, id: `${count}` });
+	loader.retrievedConvo.unshift({username:"Jisie", conversation: `${temp}`, id: `${count}` });
+	console.log(loader.retrievedConvo);
+	let appendDOM = document.getElementById("message-history-div");
+	var tempString = "<div class=message-entry>" +
+	"<div class=username-item> " + "Jisie" + "</div>" +
+	"<div class=conversation-item>" + temp + "</div>" +
+	"<button id=delete-button img=images/trash.svg></button></div> ";
+	appendDOM.innerHTML += tempString;
+
+	document.getElementById("enter-text-field").value ="";
+}, false);
+
+
+function enterButtonEvent(){ 
 	/*
     Once enter key is pressed, event occurs that triggers enter-text-field element to pass
     data contained to a variable, which is unshifted into convoArr[]. Then,
     printMessage is passed the current convoArr[].
-    */
+	*/
     
 
-	if (event.keyCode === 13){
+	if (event.keyCode === 13 || event.which === 13){
 		count++;
-		temp += document.getElementByClassName("enter-text-field").innerHTML; //this is problematic.
-		var empty = convoArr.username.unshift("Jisie").conversation.unshift(temp);
-        
-	}
-    
-	printMessage(convoArr, count);
+		temp =  document.getElementById("enter-text-field").value;
+		loader.retrievedConvo.unshift({username:"Jisie", conversation: `${temp}`, id: `${count}` });
+		console.log("this occured");
+		printMessage(loader.retrievedConvo[count]);
+		temp = "";
+	}  
 }
 
 
-function printMessage(lastMessage, position){
+function printMessage(currentMessage){
 	/*
     Push array of conversation to the HMTL page.
     */
+	
+	let textField = document.getElementById("message-history-div"); 
+	let printText= "";
+	
 
-	var textField = document.getElementById("message-history-div"); 
-	var printText;
-
-	printText += `<div class="text-message">
-    <h4 class="username"> ${lastMessage.username} </h4>
-	<h2 class="conversation item"> ${lastMessage.conversation} </h2>
-    </div> <button id="delete-button-${position}"></button>`; //reference to the position.
-    
-	deleter.createDeleteEntry(position, printText, convoArr); // This passes a reference to a specific text message element and creates a delete button.
-    
+	printText += "<div class=message-entry>" +
+	"<div class=username-item> " + currentMessage.username + "</div>" +
+	"<div class=conversation-item>" + currentMessage.conversation + "</div>" +
+	"<button id=delete-button img=images/trash.svg></button></div> "; //reference to the position.
+	console.log(printText);
 	textField.innerHTML += printText;
 
 }
 
-module.exports = {sendButtonEvent, printMessage};
+module.exports = {enterButtonEvent, printMessage};

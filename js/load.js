@@ -1,26 +1,25 @@
 "use strict";
-/*
-Declarations
-
-*/
-
+/* Declarations */
 
 var startDateTime = Date().now;
 var convoRequest = new XMLHttpRequest();
-var retrievedConvo;
-
+let retrievedConvo = [];
 
 /* 
 Event-Listeners
 */
 
 convoRequest.addEventListener("load", convoRequestComplete);
-
-
-
+convoRequest.addEventListener("error", convoRequestError);
 function convoRequestComplete(event) {
-	retrievedConvo = JSON.parse(event.target.responseText); //error
-	showData(retrievedConvo);
+	let temp = JSON.parse(event.target.responseText); 
+	console.log(temp);
+	showData(temp);
+}
+
+function convoRequestError(event) {
+
+	console.log("ConvoRequest - Error", event.target.responseText);
 }
 
 /*
@@ -28,19 +27,21 @@ showData function takes an object passed and makes it available for initial conv
 convoData string object, which is concatenated to "message-history-div".
 */ 
 
-
-function showData(dataArray){
+function showData(dataToBeParsed){ 
 	var preHistory = document.getElementById("message-history-div");
 
-	for(var entry in dataArray) {                  
+	for(let entry in dataToBeParsed) {     
 		var convoData = "";
-		var convoItem = dataArray[entry];
-		convoData += `<div class="message-entry">
-    <h4 class="username-item"> ${convoItem.username} </h4>
-    <h2 class="conversation-item"> ${convoItem.conversation} </h2>
-    </div>`;
+		let message = dataToBeParsed[entry];
+		retrievedConvo.unshift(dataToBeParsed[entry]);
+		console.log(retrievedConvo);
+		convoData += "<div class=message-entry>" +
+		"<div class=username-item> " + message.username + "</div>" +
+		"<div class=conversation-item>" + message.conversation  + "</div>" +
+		"<button id=delete-button img=images/trash.svg></button></div> ";
 
 		preHistory.innerHTML += convoData;
+		
 	}
 
 }
@@ -49,4 +50,4 @@ function showData(dataArray){
 convoRequest.open("GET", "js/convoInit.json");
 convoRequest.send();
 
-module.exports = {showData}; //Export showData function to Main.js to call it.
+module.exports = {showData, retrievedConvo}; //Export showData function to Main.js to call it.
