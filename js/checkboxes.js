@@ -26,7 +26,7 @@ function darkSide() {
           user[i].style.color = '#7acdcf';
         }
         for (x = 0, taco = conversation.length; x < taco; x++) {
-            conversation[x].style.color = '#aaaaaa';
+            conversation[x].style.color = '#2c314f';
         }
         for (y = 0, burrito = conversation.length; y < burrito; y++) {
             background[y].style.backgroundColor = '#efeee9';
