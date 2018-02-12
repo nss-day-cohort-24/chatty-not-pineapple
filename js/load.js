@@ -38,7 +38,7 @@ function showData(dataToBeParsed){
 		convoData += "<div class=message-entry>" +
 		"<div class=username-item> " + message.username + "</div>" +
 		"<div class=conversation-item>" + message.conversation  + "</div>" +
-		"<button id=delete-button img=images/trash.svg></button></div> ";
+		"<button id=delete-button>DELETE</button></div> ";
 
 		preHistory.innerHTML += convoData;
 		

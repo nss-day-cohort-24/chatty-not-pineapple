@@ -6,7 +6,7 @@ var largeText = document.getElementById("text-box");
 
 function darkSide() {
     var conversation = document.getElementsByClassName("conversation-item"), x, taco;
-    var background = document.getElementsByTagName("h2"), y, burrito;
+    var background = document.getElementsByClassName("conversation-item"), y, burrito;
 
     if (darkBackground.checked === true) {
         console.log("the box is checked");
