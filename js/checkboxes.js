@@ -20,7 +20,7 @@ function darkSide() {
 }
 
 function darkground() {
-    var background = document.getElementsByClassName("message-history-div"), i, len;
+    var background = document.getElementsByClassName("conversation-item"), i, len;
     if (darkBackground.checked === true) {
         console.log("the box is checked");
         for (i = 0, len = background.length; i < len; i++) {
@@ -28,7 +28,7 @@ function darkground() {
         }
     }else if(darkBackground.checked === false) {
         for (i = 0, len = background.length; i < len; i++) {
-         background[i].style.color = '#e7e7e7';
+         background[i].style.backgroundColor = '#e7e7e7';
         }
     }
     
