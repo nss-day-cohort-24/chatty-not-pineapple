@@ -1,24 +1,24 @@
 "use strict";
 
 let deleter = require("./delete");
-
+let loader = require("./load");
 /* 
 Declarations
 */
 
 
-let count = 0;
-var temp = {
-
-	username: "" , 
-	convo: ""
-
-};
-var convoArr = [{
+let count = 5;
+let enterButton = document.getElementById("send-button");
+let temp = {
 
 	username: "",
-	conversation: ""
-}];
+	conversation: "",
+	id: ""
+
+};
+
+
+let convoArr = loader.retrievedConvo;
 
 
 
@@ -30,18 +30,16 @@ function sendButtonEvent(event){
     */
     
 
-	if (event.keyCode === 13){
+	if (event.keyCode === 13 || event.which === 13){
 		count++;
-		temp += document.getElementByClassName("enter-text-field").innerHTML; //this is problematic.
-		var empty = convoArr.username.unshift("Jisie").conversation.unshift(temp);
-        
-	}
-    
-	printMessage(convoArr, count);
+		temp += document.getElementByClassName("enter-text-field").innerHTML;
+		convoArr.unshift({username:"Jisie", conversation: `${temp}`, id: `${count}` });
+		printMessage(convoArr);
+	}  
 }
 
 
-function printMessage(lastMessage, position){
+function printMessage(lastMessage){
 	/*
     Push array of conversation to the HMTL page.
     */
@@ -49,14 +47,14 @@ function printMessage(lastMessage, position){
 	var textField = document.getElementById("message-history-div"); 
 	var printText;
 
-	printText += `<div class="text-message">
+	printText += `<div class="message-entry">
     <h4 class="username"> ${lastMessage.username} </h4>
 	<h2 class="conversation item"> ${lastMessage.conversation} </h2>
-    </div> <button id="delete-button-${position}"></button>`; //reference to the position.
-    
-	deleter.createDeleteEntry(position, printText, convoArr); // This passes a reference to a specific text message element and creates a delete button.
+    </div> <button id="delete-button"></button>`; //reference to the position.
     
 	textField.innerHTML += printText;
+	//	deleter.createDeleteEntry(position, printText, convoArr); // This passes a reference to a specific text message element and creates a delete button.
+	deleter.deleteParent();
 
 }
 

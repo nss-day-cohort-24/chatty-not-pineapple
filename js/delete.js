@@ -2,26 +2,33 @@
 
 let publish = require("./publish");
 
+document.querySelector("body").addEventListener("click", deleteParent);
 
 
-function createDeleteEntry(position, printText, convoArr){ 
-	/*
-    Create delete button
-    */
-	var appendButton; 
-	appendButton += `<button img="images/trash.svg" id="delete-button-${position}"></button>`;
-	printText += appendButton;
-    
-	/* 
-    Add eventlistener to button that, when clicked, execute an anonymous function to splice from
-    convoArr, at given position, data
-    */
+function deleteParent(event){
 
-	document.getElementById(`"delete-button-${position}"`).addEventListener("click", function(){
-		convoArr[position] = "";
-	});
-	return printText;
+	if (event.target.id === "delete-button") {
+		event.target.parentNode.remove();
+		console.log("test");
+		console.log(event.target.parentNode);
+	}
 
 }
 
-module.exports = {createDeleteEntry};
+let deleteAll = document.getElementById("deleteAllButton").addEventListener("click", function clear(messages) {
+	
+	document.getElementById("message-history-div").innerHTML=""; 
+
+	if(messages.value > 0) {
+		document.getElementById("deleteAllButton").disabled = false;
+	} else{
+		document.getElementById("enter-text-field").addEventListener("keyup", function enable(messages) {
+			if (event.which === 13 || event.keyCode == 13) {
+				document.getElementById("deleteAllButton").disabled = false; 
+			}
+		});
+		document.getElementById("deleteAllButton").disabled = true;
+	} 
+});
+
+module.exports = {deleteParent, deleteAll};
