@@ -29,7 +29,7 @@ function darkSide() {
             conversation[x].style.color = '#e7e7e7';
         }
         for (y = 0, burrito = conversation.length; y < burrito; y++) {
-            background[y].style.backgroundColor = '#red';
+            background[y].style.backgroundColor = '#2c81b7';
         }
     }
 }
