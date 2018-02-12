@@ -13,23 +13,23 @@ function darkSide() {
     if (darkBackground.checked === true) {
         console.log("the box is checked");
         for (i = 0, len = user.length; i < len; i++) {
-          user[i].style.color = '#2C81B7';
+          user[i].style.color = '#aaaaaa';
         }
         for (x = 0, taco = conversation.length; x < taco; x++) {
-            conversation[x].style.color = '#aaaaaa';
+            conversation[x].style.color = '#ffffff';
         }
         for (y = 0, burrito = conversation.length; y < burrito; y++) {
-            background[y].style.backgroundColor = '#e9e9e9';
+            background[y].style.backgroundColor = '#2c314f';
         }
     }else if(darkBackground.checked === false) {
         for (i = 0, len = user.length; i < len; i++) {
-          user[i].style.color = '#ffffff';
+          user[i].style.color = '#2c314f';
         }
         for (x = 0, taco = conversation.length; x < taco; x++) {
-            conversation[x].style.color = '#e7e7e7';
+            conversation[x].style.color = '#7acdcf';
         }
         for (y = 0, burrito = conversation.length; y < burrito; y++) {
-            background[y].style.backgroundColor = '#2c81b7';
+            background[y].style.backgroundColor = '#efeee9';
         }
     }
 }
