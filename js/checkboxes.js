@@ -14,14 +14,14 @@ function darkSide() {
           message[i].style.color = '#2C81B7';
         }
         for (x = 0, taco = background.length; x < taco; x++) {
-            background[x].style.backgroundColor = '#aaaaaa';
+            background[x].style.color = '#aaaaaa';
           }
     }else if(darkBackground.checked === false) {
         for (i = 0, len = message.length; i < len; i++) {
           message[i].style.color = '#ffffff';
         }
         for (x = 0, taco = background.length; x < taco; x++) {
-            background[x].style.backgroundColor = '#e7e7e7';
+            background[x].style.color = '#e7e7e7';
            }
     }
 }
