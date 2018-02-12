@@ -19,7 +19,7 @@ enterButton.addEventListener("keyup", enterButtonEvent);
 
 document.getElementById("send-button").addEventListener("click", function( event ) {
 	// display the current click count inside the clicked div
-	event.target.textContent = "click count: " + event.detail;
+	event.target.textContent = "SEND";
 	temp =  document.getElementById("enter-text-field").value;
 	count++;
 	console.log({username:"Jisie", conversation: `${temp}`, id: `${count}` });
