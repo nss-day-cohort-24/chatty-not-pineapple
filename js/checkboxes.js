@@ -22,7 +22,7 @@ darkBackground.addEventListener("click", darkSide);
 
 var changeText = document.getElementById("text-box");
 // var checkBoxLarge = document.getElementById("inlineCheckbox2");
-var message = document.getElementsByClass("navbar");
+var message = document.getElementsByClassName("navbar");
 // var messagesText = document.getElementsByClassName("message-post");
 
 function largeText() {
