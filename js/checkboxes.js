@@ -1,34 +1,26 @@
 "use strict";
 
 var darkBackground = document.getElementById("dark-box");
-// var checkBoxLarge = document.getElementById("inlineCheckbox2");
-// var message = document.getElementsByClassName("username-item");
-// var messagesText = document.getElementsByClassName("message-post");
+var largeText = document.getElementById("text-box");
+
 
 function darkSide() {
-    var user = document.getElementsByClassName("username-item"), i, len;
     var conversation = document.getElementsByClassName("conversation-item"), x, taco;
     var background = document.getElementsByTagName("h2"), y, burrito;
 
     if (darkBackground.checked === true) {
         console.log("the box is checked");
-        // for (i = 0, len = user.length; i < len; i++) {
-        //   user[i].style.color = '#aaaaaa';
-        // }
         for (x = 0, taco = conversation.length; x < taco; x++) {
             conversation[x].style.color = '#ffffff';
         }
-        for (y = 0, burrito = conversation.length; y < burrito; y++) {
+        for (y = 0, burrito = background.length; y < burrito; y++) {
             background[y].style.backgroundColor = '#2c314f';
         }
     }else if(darkBackground.checked === false) {
-        // for (i = 0, len = user.length; i < len; i++) {
-        //   user[i].style.color = '#7acdcf';
-        // }
         for (x = 0, taco = conversation.length; x < taco; x++) {
             conversation[x].style.color = '#2c314f';
         }
-        for (y = 0, burrito = conversation.length; y < burrito; y++) {
+        for (y = 0, burrito = background.length; y < burrito; y++) {
             background[y].style.backgroundColor = '#efeee9';
         }
     }
@@ -36,6 +28,30 @@ function darkSide() {
 
 darkBackground.addEventListener("click", darkSide);
 
+function bigText() {
+    var user = document.getElementsByClassName("username-item"), i, len;
+    var conversation = document.getElementsByClassName("conversation-item"), x, taco;
 
-module.exports = {darkSide};
+    if (largeText.checked === true) {
+        console.log("the box is checked");
+        for (i = 0, len = user.length; i < len; i++) {
+            user[i].style.fontSize = '2em';
+        }
+        for (x = 0, taco = conversation.length; x < taco; x++) {
+            conversation[x].style.fontSize = '2em';
+        }
+    }else if(largeText.checked === false) {
+        for (i = 0, len = user.length; i < len; i++) {
+            user[i].style.fontSize = '1em';
+        }
+        for (x = 0, taco = conversation.length; x < taco; x++) {
+            conversation[x].style.fontSize = '1em';
+        }
+    }
+}
+
+largeText.addEventListener("click", bigText);
+
+
+module.exports = {darkSide, bigText};
 
