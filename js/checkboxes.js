@@ -6,20 +6,20 @@ var darkBackground = document.getElementById("dark-box");
 // var messagesText = document.getElementsByClassName("message-post");
 
 function darkSide() {
-    // var message = document.getElementsByClassName("username-item"), i, len;
+    var message = document.getElementsByClassName("username-item"), i, len;
     var background = document.getElementsByClassName("conversation-item"), x, taco;
     if (darkBackground.checked === true) {
         console.log("the box is checked");
-        // for (i = 0, len = message.length; i < len; i++) {
-        //   message[i].style.color = '#2C81B7';
-        // }
+        for (i = 0, len = message.length; i < len; i++) {
+          message[i].style.color = '#2C81B7';
+        }
         for (x = 0, taco = background.length; x < taco; x++) {
             background[x].style.color = '#aaaaaa';
           }
     }else if(darkBackground.checked === false) {
-        // for (i = 0, len = message.length; i < len; i++) {
-        //   message[i].style.color = '#ffffff';
-        // }
+        for (i = 0, len = message.length; i < len; i++) {
+          message[i].style.color = '#ffffff';
+        }
         for (x = 0, taco = background.length; x < taco; x++) {
             background[x].style.color = '#e7e7e7';
            }
