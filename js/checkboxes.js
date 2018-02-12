@@ -56,4 +56,4 @@ function darkSide() {
 }
 darkBackground.addEventListener("click", darkSide);
 
-module.exports = {darkSide};
+module.exports = {darkSide}, darkground;
